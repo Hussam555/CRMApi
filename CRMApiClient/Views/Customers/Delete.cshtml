@@ -1,0 +1,101 @@
+﻿@model CRMApiClient.Models.Customer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    .small-header {
+        font-size: 1rem;
+       
+    }
+</style>
+<div class="card">
+    <div class="card-header">
+        <p class="small-header">Löschen: @Model.Vorname @Model.Nachname</p>
+    </div>
+    <div class="card-body">
+        <div>
+            <dl class="dl-horizontal">
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Vorname)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Vorname)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nachname)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Nachname)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Address)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Wohnort)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Wohnort)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Postleitzahl)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Postleitzahl)
+                        </dd>
+                    </div>
+
+                    <div class="col-6">
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.EmailAdresse)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.EmailAdresse)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Telephonenummer)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Telephonenummer)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Erstellungsdatum)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Erstellungsdatum)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Änderungsdatum)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Änderungsdatum)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Interest_Name)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Interest_Name)
+                        </dd>
+                    </div>
+
+                </div>
+            </dl>
+
+        </div>
+    </div>
+    <div class="card-footer">
+        <form asp-action="Delete">
+            <input type="submit" value="Löschen" class="btn btn-outline-danger" />
+            @Html.ActionLink("Zurück zur Liste", "Index", new { id = Model.Id }, new { @class = "btn btn-outline-secondary" })
+
+        </form>
+    </div>
+</div>

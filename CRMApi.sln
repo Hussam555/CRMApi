@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRMApi", "CRMApi\CRMApi.csproj", "{4BF64897-0360-421F-A5A5-1BB7A4B3AC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMApiClient", "CRMApiClient\CRMApiClient.csproj", "{D7E50B9F-15FB-4CCF-9B05-7997D7DC0B49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BF64897-0360-421F-A5A5-1BB7A4B3AC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF64897-0360-421F-A5A5-1BB7A4B3AC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF64897-0360-421F-A5A5-1BB7A4B3AC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF64897-0360-421F-A5A5-1BB7A4B3AC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E50B9F-15FB-4CCF-9B05-7997D7DC0B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E50B9F-15FB-4CCF-9B05-7997D7DC0B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E50B9F-15FB-4CCF-9B05-7997D7DC0B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E50B9F-15FB-4CCF-9B05-7997D7DC0B49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {140CD27C-EF5C-416C-8C7E-C6BCB3CD12D8}
+	EndGlobalSection
+EndGlobal

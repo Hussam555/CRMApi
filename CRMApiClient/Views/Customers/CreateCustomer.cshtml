@@ -1,0 +1,102 @@
+﻿@model CRMApiClient.Models.Customer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="CreateCustomer">
+    <div class="card">
+        <div class="card-header">
+            Neuen Kunden hinzufügen
+        </div>
+
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label asp-for="Vorname" class="control-label"></label>
+                    <input asp-for="Vorname" class="form-control" />
+                    <span asp-validation-for="Vorname" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Nachname" class="control-label"></label>
+                    <input asp-for="Nachname" class="form-control" />
+                    <span asp-validation-for="Nachname" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Wohnort" class="control-label"></label>
+                    <input asp-for="Wohnort" class="form-control" />
+                    <span asp-validation-for="Wohnort" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label asp-for="Postleitzahl" class="control-label"></label>
+                    <input asp-for="Postleitzahl" class="form-control" />
+                    <span asp-validation-for="Postleitzahl" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="EmailAdresse" class="control-label"></label>
+                    <input asp-for="EmailAdresse" class="form-control" />
+                    <span asp-validation-for="EmailAdresse" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label asp-for="Telephonenummer" class="control-label"></label>
+                    <input asp-for="Telephonenummer" class="form-control" />
+                    <span asp-validation-for="Telephonenummer" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Erstellungsdatum" class="control-label"></label>
+                    <input asp-for="Erstellungsdatum" class="form-control" />
+                    <span asp-validation-for="Erstellungsdatum" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label asp-for="Änderungsdatum" class="control-label"></label>
+                    <input asp-for="Änderungsdatum" class="form-control" />
+                    <span asp-validation-for="Änderungsdatum" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Interest_Name" class="control-label"></label>
+                    <input asp-for="Interest_Name" class="form-control" />
+                    <span asp-validation-for="Interest_Name" class="text-danger"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="form-group">
+                <span class="input-group spaced">
+                    <input type="submit" value="Speichern" class="btn btn-outline-success mt-2" />
+                </span>
+            </div>
+        </div>
+    </div>
+
+</form>
+

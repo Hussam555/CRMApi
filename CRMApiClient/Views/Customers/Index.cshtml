@@ -1,0 +1,126 @@
+﻿@model IEnumerable<CRMApiClient.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .small-header {
+        font-size: 1rem;
+    }
+</style>
+
+
+
+<div class="card mb-2">
+   
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6">
+                <p class="small-header">Kunden Liste</p>
+            </div>
+
+            <div class="col-6">
+                <p class="float-end">
+                    <a href="@Url.Action("CreateCustomer","Customers")" class="btn btn-outline-success">
+                       Neu Kunde erstellen
+                    </a>
+                </p>
+            </div>
+        </div>
+      
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-responsive-sm table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Vorname)
+                        </th>
+                        <th >
+                            @Html.DisplayNameFor(model => model.Nachname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Wohnort)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Postleitzahl)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EmailAdresse)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Telephonenummer)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Erstellungsdatum)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Änderungsdatum)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Interest_Name)
+                        </th>
+
+                        <th>Aktion</th>
+                       
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vorname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nachname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Wohnort)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Postleitzahl)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmailAdresse)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telephonenummer)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Erstellungsdatum)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Änderungsdatum)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Interest_Name)
+                            </td>
+
+                            <td>
+                                <div class="d-flex">
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-outline-warning m-1" })
+                                    @Html.ActionLink("Löschen", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger m-1" })
+                                    @Html.ActionLink("Bearbeiten", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-primary m-1" })
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
